@@ -1,0 +1,7 @@
+_show_region:
+    pattern: /showregion
+    defaults: { _controller: "AmadiGeoBundle:Geo:showRegion" }
+
+_select_region:
+    pattern: /selectregion/{code}
+    defaults: { _controller: "AmadiGeoBundle:Geo:selectRegion" }

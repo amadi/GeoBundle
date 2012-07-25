@@ -1,0 +1,40 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.regionli').hide();
+
+    });
+    $('.state').live('click',function(){
+        $(".statenactive").attr('class','state')
+        $('.regionli').hide();
+        $('.'+$(this).attr('id')).show();
+        $(this).addClass("statenactive");
+    });
+
+    $('.regionli').live('click',function(){
+        $(".regionactive").attr('class','regionli')
+        $(this).addClass("regionactive");
+    });
+    $('#closeregion').live('click',function(){
+        $('#regionselected').remove();
+        $('#regionoverlay').remove();
+    });
+</script>
+<div id class="well statewell">
+    <a class="close overlay-close" id="closeregion" style="position: inherit; opacity: 1; color: #000000;" data-dismiss="alert" href="#">ЗАКРЫТЬ ×</a>
+    <div class="row-fluid">
+        <div class="span3" style="width: 240px;">
+            <ul class="nav nav-list" >
+                {% for district in districts %}
+                <li id="{{ district.id }}" class="state">{{district}} </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="span2" style="width: 180px;">
+            <ul class="nav nav-list">
+                {% for region in regions %}
+                    <li class="{{ region.district.id }} regionli"><a href="{{path('_select_region', { 'code': region.id })}}">{{region}}</a> </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
