@@ -1,0 +1,47 @@
+.statewell{
+    -webkit-box-shadow: 7px 7px 9px rgba(50, 50, 50, 0.82);
+    -moz-box-shadow:    7px 7px 9px rgba(50, 50, 50, 0.82);
+    box-shadow:         7px 7px 9px rgba(50, 50, 50, 0.82);
+}
+#regionselected{
+    display: block;
+    height: 800px;
+    left: 24%;
+    min-width: 600px;
+    position: absolute;
+    top: 10%;
+    width: 50%;
+}
+.state {
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.regionactive{
+}
+.statenactive{
+    padding: 10px;
+    background-color: #3366CC;
+    font-size: 20px;
+    color: white;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+.regionli{
+}
+.regionactive a{
+    background-color: #3366CC;
+    color: white;
+}
+.regionli a{
+    padding: 5px !important;
+}
+.regionli a:hover{
+    background-color: rgba(46, 92, 208, 0.26);
+    color: #3366CC;
+}
