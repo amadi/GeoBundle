@@ -14,12 +14,6 @@ $bundles = array(
             new Amadi\GeoBundle\AmadiGeoBundle(),
         );
 ```
-`/app/autoload.php`:
-```
-$loader->registerNamespaces(array(
-    'Amadi'            => __DIR__.'/../src',
-));
-```
 А так же файл `/app/config/config.php`, добавив в него следующие строки
 ```
 services:
